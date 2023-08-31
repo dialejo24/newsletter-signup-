@@ -1,3 +1,124 @@
+@font-face {
+    font-family: 'Robot';
+    src: url('./assets/fonts/Roboto-Regular.ttf'), url('./assets/fonts/Roboto-Bold.ttf');
+
+}
+
+:root {
+    --tomato: hsl(4,100%,67%);
+    --dark-slate-Grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231,7%,60%);
+    --white: hsl(0,0%,100%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Robot', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.successful-card {
+    visibility: hidden;
+    position: absolute;
+    top:0;
+}
+
+h1,
+h2 {
+    color: var(--dark-slate-Grey);
+}
+
+h1 {
+    font-size: 2.3rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    color: var(--charcoal-grey);
+    line-height: 1.5;
+}
+
+h1 + p {
+    margin-block: 1em 1.5em;
+}
+
+li + li {
+    margin-top:.5em;
+}
+
+li, li > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+form {
+    margin-top: 3em;
+}
+
+button {
+    font-family: 'Robot', sans-serif;
+    color: var(--white);
+    background-color: var(--dark-slate-Grey);
+    border: none;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 7px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+input[type="email"] {
+    padding: 1em;
+    font-size: .9rem;
+    font-family: 'Robot', sans-serif;
+    border-radius: 6px;
+    border: none;
+    outline: 1px solid var(--grey);
+    width: 100%;   
+    margin-block: .7em 2em;
+}
+
+label[for="email"] {
+    color: var(--dark-slate-Grey);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.user-email {
+    color: var(--dark-slate-Grey);
+    font-weight: bold;
+}
+
+.header-img {
+    background-image: url("assets/images/illustration-sign-up-mobile.svg");
+    background-size: 100%;
+    background-position: center;
+    height: 75.7vw;
+    background-repeat: no-repeat;
+    max-height: 380px;
+}
+
+.main-content {
+    padding-inline: 1.5em;
+    margin-top: 2em;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
