@@ -37,13 +37,13 @@ body {
     overflow: hidden;
 }
 
-.successful-card {
-    min-height: 100vh;
+.successful-card_content {
     width: 85%;
     margin-inline: auto;
     max-width: 450px;
     display:grid;
     align-items:flex-end;
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-    font-size:2.5rem;
+    font-size:clamp(2.3rem, 1rem + 3vw, 3rem);;
     margin-block: 1em .5em;
 }
 
@@ -103,7 +103,7 @@ button {
     font-size: 1.1rem;
 }
 
-.successful-card > button {
+.successful-card_content > button {
     margin-bottom: 2em;
 }
 
@@ -188,6 +188,28 @@ label[for="email"] {
         background: linear-gradient(45deg,rgb(243, 85, 111), var(--tomato), rgb(206, 82, 45) 90%);
     }
 
+    .successful-card {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .successful-card_content {
+        background-color: var(--white);
+        padding: 3em 2.5em;
+        border-radius: 30px;
+        min-height: initial;
+    }
+
+    .successful-card_content > button {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin-block: .5em;
+        line-height: 1;
+    }
 
 }
 
