@@ -180,6 +180,14 @@ label[for="email"] {
         border-radius: 20px;
     }
 
+    button, input {
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: linear-gradient(45deg,rgb(243, 85, 111), var(--tomato), rgb(206, 82, 45) 90%);
+    }
+
 
 }
 
