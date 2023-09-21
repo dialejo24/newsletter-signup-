@@ -143,6 +143,29 @@ label[for="email"] {
     margin-top: 2em;
 }
 
+input:required + .error-message {
+    position: relative;
+}
+
+input:required + .error-message::after {
+    content:"Valid email required";
+    font-size:.75rem;
+    top:-37px;
+    color:var(--tomato);
+    position: absolute;
+    right:0;
+    font-family: 'Robot', sans-serif;
+    font-weight: bold;
+    width:150px;
+    text-align: right;
+}
+
+.error-style {
+    outline: 1px solid var(--tomato) !important;
+    background-color: rgb(243, 225, 228);
+    color: var(--tomato);
+}
+
 
 @media (min-width:700px) {
     body {

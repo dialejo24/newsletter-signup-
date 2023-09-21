@@ -1,16 +1,60 @@
 import './style.css';
 
-let successfulCard = document.querySelector(".successful-card");
-let mainContainer = document.querySelector(".container");
-let subscribeButton = document.querySelector(".subscribe");
+let form = document.querySelector("form");
+let mainWindow = document.querySelector(".container");
+let successfulCardWindow = document.querySelector(".successful-card");
+let emailInput = document.querySelector("input[type='email']");
+let userEmail = document.querySelector(".user-email");
 let dismissButton = document.querySelector(".dismiss");
+let suscribeButton = document.querySelector(".subscribe");
+let errorMessageContainer = document.querySelector("input + span");
 
-subscribeButton.addEventListener("click", e => {
-    mainContainer.classList.add("hide-content");
-    successfulCard.classList.remove("hide-content");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    hideMainWindow();
+    setUserEmail();
 })
 
-dismissButton.addEventListener("click", e => {
-    mainContainer.classList.remove("hide-content");
-    successfulCard.classList.add("hide-content");
+dismissButton.addEventListener("click", () => {
+    showMainWindow();
+    cleanInput();
+    removeErrorStyle();
 })
+
+suscribeButton.addEventListener("click", () => {
+    addErrorStyle();
+})
+
+emailInput.addEventListener("keydown", () => {
+    removeErrorStyle();
+})
+
+
+function hideMainWindow() {
+    successfulCardWindow.classList.remove("hide-content");
+    mainWindow.classList.add("hide-content");
+}
+
+function showMainWindow() {
+    successfulCardWindow.classList.add("hide-content");
+    mainWindow.classList.remove("hide-content");
+}
+
+function setUserEmail() {
+    userEmail.textContent = emailInput.value;
+}
+
+function addErrorStyle() {
+    emailInput.classList.add("error-style");
+    errorMessageContainer.classList.add("error-message");
+}
+
+function removeErrorStyle() {
+    emailInput.classList.remove("error-style");
+    errorMessageContainer.classList.remove("error-message");
+}
+
+function cleanInput() {
+    emailInput.value = "";
+}
