@@ -1,4 +1,6 @@
 import './style.css';
+import iconList from './assets/images/icon-list.svg';
+import iconSuccess from './assets/images/icon-success.svg';
 
 let form = document.querySelector("form");
 let mainWindow = document.querySelector(".container");
@@ -8,7 +10,14 @@ let userEmail = document.querySelector(".user-email");
 let dismissButton = document.querySelector(".dismiss");
 let suscribeButton = document.querySelector(".subscribe");
 let errorMessageContainer = document.querySelector("input + span");
+let iconListImage = document.querySelectorAll("img[alt='checked-icon']");
+let successIconImage = document.querySelector("img[alt='success-icon']");
 
+iconListImage.forEach(image => {
+    setImageUrl(image, iconList);
+});
+
+setImageUrl(successIconImage, iconSuccess);
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -57,4 +66,8 @@ function removeErrorStyle() {
 
 function cleanInput() {
     emailInput.value = "";
+}
+
+function setImageUrl(image, url) {
+    image.src = url;
 }
