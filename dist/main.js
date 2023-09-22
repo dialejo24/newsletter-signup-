@@ -126,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\r\nlet form = document.querySelector(\"form\");\r\nlet mainWindow = document.querySelector(\".container\");\r\nlet successfulCardWindow = document.querySelector(\".successful-card\");\r\nlet emailInput = document.querySelector(\"input[type='email']\");\r\nlet userEmail = document.querySelector(\".user-email\");\r\nlet dismissButton = document.querySelector(\".dismiss\");\r\nlet suscribeButton = document.querySelector(\".subscribe\");\r\nlet errorMessageContainer = document.querySelector(\"input + span\");\r\n\r\n\r\nform.addEventListener(\"submit\", e => {\r\n    e.preventDefault();\r\n    hideMainWindow();\r\n    setUserEmail();\r\n})\r\n\r\ndismissButton.addEventListener(\"click\", () => {\r\n    showMainWindow();\r\n    cleanInput();\r\n    removeErrorStyle();\r\n})\r\n\r\nsuscribeButton.addEventListener(\"click\", () => {\r\n    addErrorStyle();\r\n})\r\n\r\nemailInput.addEventListener(\"keydown\", () => {\r\n    removeErrorStyle();\r\n})\r\n\r\n\r\nfunction hideMainWindow() {\r\n    successfulCardWindow.classList.remove(\"hide-content\");\r\n    mainWindow.classList.add(\"hide-content\");\r\n}\r\n\r\nfunction showMainWindow() {\r\n    successfulCardWindow.classList.add(\"hide-content\");\r\n    mainWindow.classList.remove(\"hide-content\");\r\n}\r\n\r\nfunction setUserEmail() {\r\n    userEmail.textContent = emailInput.value;\r\n}\r\n\r\nfunction addErrorStyle() {\r\n    emailInput.classList.add(\"error-style\");\r\n    errorMessageContainer.classList.add(\"error-message\");\r\n}\r\n\r\nfunction removeErrorStyle() {\r\n    emailInput.classList.remove(\"error-style\");\r\n    errorMessageContainer.classList.remove(\"error-message\");\r\n}\r\n\r\nfunction cleanInput() {\r\n    emailInput.value = \"\";\r\n}\n\n//# sourceURL=webpack://newsletter-sign-up-with-success-message-main/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_images_icon_list_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/icon-list.svg */ \"./src/assets/images/icon-list.svg\");\n/* harmony import */ var _assets_images_icon_success_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/images/icon-success.svg */ \"./src/assets/images/icon-success.svg\");\n\r\n\r\n\r\n\r\nlet form = document.querySelector(\"form\");\r\nlet mainWindow = document.querySelector(\".container\");\r\nlet successfulCardWindow = document.querySelector(\".successful-card\");\r\nlet emailInput = document.querySelector(\"input[type='email']\");\r\nlet userEmail = document.querySelector(\".user-email\");\r\nlet dismissButton = document.querySelector(\".dismiss\");\r\nlet suscribeButton = document.querySelector(\".subscribe\");\r\nlet errorMessageContainer = document.querySelector(\"input + span\");\r\nlet iconListImage = document.querySelectorAll(\"img[alt='checked-icon']\");\r\nlet successIconImage = document.querySelector(\"img[alt='success-icon']\");\r\n\r\niconListImage.forEach(image => {\r\n    setImageUrl(image, _assets_images_icon_list_svg__WEBPACK_IMPORTED_MODULE_1__);\r\n});\r\n\r\nsetImageUrl(successIconImage, _assets_images_icon_success_svg__WEBPACK_IMPORTED_MODULE_2__);\r\n\r\nform.addEventListener(\"submit\", e => {\r\n    e.preventDefault();\r\n    hideMainWindow();\r\n    setUserEmail();\r\n})\r\n\r\ndismissButton.addEventListener(\"click\", () => {\r\n    showMainWindow();\r\n    cleanInput();\r\n    removeErrorStyle();\r\n})\r\n\r\nsuscribeButton.addEventListener(\"click\", () => {\r\n    addErrorStyle();\r\n})\r\n\r\nemailInput.addEventListener(\"keydown\", () => {\r\n    removeErrorStyle();\r\n})\r\n\r\n\r\nfunction hideMainWindow() {\r\n    successfulCardWindow.classList.remove(\"hide-content\");\r\n    mainWindow.classList.add(\"hide-content\");\r\n}\r\n\r\nfunction showMainWindow() {\r\n    successfulCardWindow.classList.add(\"hide-content\");\r\n    mainWindow.classList.remove(\"hide-content\");\r\n}\r\n\r\nfunction setUserEmail() {\r\n    userEmail.textContent = emailInput.value;\r\n}\r\n\r\nfunction addErrorStyle() {\r\n    emailInput.classList.add(\"error-style\");\r\n    errorMessageContainer.classList.add(\"error-message\");\r\n}\r\n\r\nfunction removeErrorStyle() {\r\n    emailInput.classList.remove(\"error-style\");\r\n    errorMessageContainer.classList.remove(\"error-message\");\r\n}\r\n\r\nfunction cleanInput() {\r\n    emailInput.value = \"\";\r\n}\r\n\r\nfunction setImageUrl(image, url) {\r\n    image.src = url;\r\n}\n\n//# sourceURL=webpack://newsletter-sign-up-with-success-message-main/./src/index.js?");
 
 /***/ }),
 
@@ -147,6 +147,26 @@ eval("module.exports = __webpack_require__.p + \"35eab922fdbe4b5324d4.ttf\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"160d7a6ac26376e5e977.ttf\";\n\n//# sourceURL=webpack://newsletter-sign-up-with-success-message-main/./src/assets/fonts/Roboto-Regular.ttf?");
+
+/***/ }),
+
+/***/ "./src/assets/images/icon-list.svg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/icon-list.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"5e317c030bb9f11a3343.svg\";\n\n//# sourceURL=webpack://newsletter-sign-up-with-success-message-main/./src/assets/images/icon-list.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/icon-success.svg":
+/*!********************************************!*\
+  !*** ./src/assets/images/icon-success.svg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1ad016255f85fa877dc6.svg\";\n\n//# sourceURL=webpack://newsletter-sign-up-with-success-message-main/./src/assets/images/icon-success.svg?");
 
 /***/ }),
 
